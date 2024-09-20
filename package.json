@@ -13,15 +13,14 @@
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.0.2",
     "@mui/material": "^6.0.2",
+    "@mui/styled-engine-sc": "^6.0.2",
     "@mui/x-data-grid": "^7.16.0",
-    "@toolpad/core": "^0.5.2",
     "mongoose": "^8.6.0",
-    "mui": "^0.0.1",
     "next": "14.2.7",
-    "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.53.0"
+    "react-hook-form": "^7.53.0",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "eslint": "^8",

@@ -1,7 +1,7 @@
 export default async function Home({ params }) {
-  const APIBASE = process.env.NEXT_PUBLIC_API_BASE;
+  const API_BASE = process.env.NEXT_PUBLIC_API_BASE;
 
-    const data = await fetch(`${APIBASE}/product/${params.id}`, { cache: "no-store" });
+  const data = await fetch(`${API_BASE}/product/${params.id}`, { cache: "no-store" });
   const product = await data.json();
   console.log({ product, category: product.category });
   // const id = params.id;
