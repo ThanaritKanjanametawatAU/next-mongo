@@ -2,7 +2,20 @@ import Product from "@/models/Product";
 import { ObjectId } from 'mongodb';
 
 export async function GET() {
-  return Response.json(await Product.find());
+  // Apply pagination
+
+  const pno = request.nextUrl.searchParams.get("pno");
+
+  if (pno) {
+    const size = 3;
+    const startIndex = (pno - 1) * size;
+    const products = await Product.find().sort({ order: -1 }).skip(startIndex).limit(size);
+    return Response.json(products);
+  }
+
+    const products = await Product.find().sort({ order: -1 });
+    return Response.json(products);
+
 }
 
 export async function POST(request) {
